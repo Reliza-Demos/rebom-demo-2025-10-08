@@ -1,0 +1,17 @@
+on:
+  repository_dispatch:
+    types: [reliza-build-event]
+
+name: Perform Actions on Product Approval
+
+jobs:
+  build:
+    name: Build And Push
+    runs-on: ubuntu-latest
+    steps:
+      - id: reliza-build-start 
+        name: Display build start
+        run: echo "Performing actions on product approval"
+      - id: display-release-version
+        name: Display Approved Product Release Version
+        run: echo "Approval was performed on ${{ github.event.client_payload.product_version }}"
