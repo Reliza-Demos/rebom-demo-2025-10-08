@@ -59,6 +59,7 @@ jobs:
           enable_codeql: 'true'
           codeql_language: 'javascript'
           rearm_component_id: 225a5bfc-192d-4109-8d62-e37f637cc2a7
+          successful_build_lifecycle: 'DRAFT'
   build-helm:
     permissions:
       id-token: write
